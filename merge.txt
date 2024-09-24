@@ -1,0 +1,19 @@
+Lyte is a Client Framework designed to help you build robust and 
+reliable web applications in an efficient manner. Lyte framework helps
+you develop reusable custom UI components, enable navigation in your 
+application, manage the application state, communicate with the back end, and more.
+
+Lyte adheres to global web design standards and also implements incremental 
+adaptation, thereby enabling scalability. Because of the framework's 
+light-weighted nature, your application renders easily across all environments.
+You can access Lyte using an Integrated development toolkit, Lyte CLI, 
+
+(yeah)which would enable you to create and manage your applications from your local system.
+How does Lyte work?
+Lyte framework focuses on three layers,(yeah)
+which work seamlessly and independently of each other.(yeah)
+
+The decoupling of these layers allows them to work autonomously,
+where their functioning does not affect one another,
+and they are unware of each other's existence.
+The three layers composing Lyte Framework are:
