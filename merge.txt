@@ -15,5 +15,5 @@ which work seamlessly and independently of each other.(yeah)
 
 The decoupling of these layers allows them to work autonomously,
 where their functioning does not affect one another,
-and they>are unware of each other's existence.
+and they are unware of each other's existence.
 The three layers composing Lyte Framework are:
