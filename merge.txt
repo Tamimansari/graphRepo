@@ -1,3 +1,51 @@
+return {
+    currentRepo : Lyte.attr("string",{default: ""}),
+    commitStatus : Lyte.attr("object",{default: ""}),
+    hasPath : Lyte.attr('boolean' , {default : true}),
+    checkAllTrackedFiles : Lyte.attr('boolean' , {
+        default : false,
+    }),
+    gitStatus : Lyte.attr('object' , {
+        default :  {
+            trackedFiles: [
+                'component/comp1/66.txt',
+                'component/comp2/mm.txt',
+                'component/comp3/n5.txt',
+                'component/comp4/n55.txt',
+                'package.json'
+            ],
+            untrackedFiles: [
+                'component/comp7/utils.js',
+                'component/comp7df/utils.js',
+                'component/comp7asfd/utils.js',
+                'component/comp74t/utils.js',
+                'component/comp7etrv/utils.js',
+                'component/compew7/utils.js',
+                'component/comp1/vfx.js'
+            ]
+       }
+    }),
+    filesList : Lyte.attr('array',{
+        default : []
+    }),
+
+    graphList : Lyte.attr('array' , {
+        default : []
+           
+    }),
+    gitBranches : Lyte.attr('array' ,{
+        default : []
+    }),
+    currentBranch : Lyte.attr('string' , {
+        default : ''
+    }),
+    selectedBranches : Lyte.attr('array' , {
+        default : []
+    })
+
+
+}
+
 Lyte is a Client Framework designed to help you build robust and 
 reliable web applications in an efficient manner. Lyte framework helps
 you develop reusable custom UI components, enable navigation in your 
@@ -17,3 +65,51 @@ The decoupling of these layers allows them to work autonomously,
 where their functioning does not affect one another,
 and they are unware of each other's existence.
 The three layers composing Lyte Framework are:
+
+return {
+    currentRepo : Lyte.attr("string",{default: ""}),
+    commitStatus : Lyte.attr("object",{default: ""}),
+    hasPath : Lyte.attr('boolean' , {default : true}),
+    checkAllTrackedFiles : Lyte.attr('boolean' , {
+        default : false,
+    }),
+    gitStatus : Lyte.attr('object' , {
+        default :  {
+            trackedFiles: [
+                'component/comp1/66.txt',
+                'component/comp2/mm.txt',
+                'component/comp3/n5.txt',
+                'component/comp4/n55.txt',
+                'package.json'
+            ],
+            untrackedFiles: [
+                'component/comp7/utils.js',
+                'component/comp7df/utils.js',
+                'component/comp7asfd/utils.js',
+                'component/comp74t/utils.js',
+                'component/comp7etrv/utils.js',
+                'component/compew7/utils.js',
+                'component/comp1/vfx.js'
+            ]
+       }
+    }),
+    filesList : Lyte.attr('array',{
+        default : []
+    }),
+
+    graphList : Lyte.attr('array' , {
+        default : []
+           
+    }),
+    gitBranches : Lyte.attr('array' ,{
+        default : []
+    }),
+    currentBranch : Lyte.attr('string' , {
+        default : ''
+    }),
+    selectedBranches : Lyte.attr('array' , {
+        default : []
+    })
+
+
+}
