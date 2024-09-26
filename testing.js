@@ -16,6 +16,8 @@ return {
             ],
             untrackedFiles: [
                 'component/comp7/utils.js',
+
+                
                 'component/comp7df/utils.js',
                 'component/comp7asfd/utils.js',
                 'component/comp74t/utils.js',
