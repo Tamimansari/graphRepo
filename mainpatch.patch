@@ -9,6 +9,9 @@ index e69de29..74fbd0b 100644
 +    function address(){
 +        console.log("ji");}
 +    function ph(){
+
+
+    
 +    if(true){
 +        console.log("hi");
 +        console.log("temp");
