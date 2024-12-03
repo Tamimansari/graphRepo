@@ -1,0 +1,17 @@
+{
+  "unpublishedVersion": {
+    "multiplefiles": [
+      {
+        "msg": "sample_1",
+        "type_of_commit": "[BUGFIX]",
+        "fileName": [
+          ".gitignore",
+          "mainpatch.patch"
+        ],
+        "date_of_commit": "3 - 12 - 2024",
+        "time_of_commit": "10:10:54",
+        "hash_of_commit": "9567f68"
+      }
+    ]
+  }
+}
