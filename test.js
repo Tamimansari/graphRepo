@@ -10,3 +10,6 @@ function dumpResponse(){
   request.open('get', 'https://www.google.com', true)
   // Fire away!
   request.send()
+
+
+  
