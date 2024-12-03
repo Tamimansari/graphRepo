@@ -1,0 +1,18 @@
+diff --git a/test.js b/test.js
+index e69de29..74fbd0b 100644
+--- a/test.js
++++ b/test.js
+@@ -0,0 +1,12 @@
++function school(){
++    console.log("ji");
++    }
++    function address(){
++        console.log("ji");}
++    function ph(){
++    if(true){
++        console.log("hi");
++        console.log("temp");
++    }
++    }
++console.log("address");
+\ No newline at end of file

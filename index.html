@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit History</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .commit-history {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        .chart {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="commit-history">
+        <svg class="chart"></svg>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const commitData = `
+| | * 7f4f4b129  CodeCheck : forloop check in audioSampleSender.js
+| | * 340023163  CodeCheck : forloop check in audioSampleSender.js
+| | * 8327f284e  forloop check in audioSampleSender.js
+| | * d38974c78  CodeCheck : elseif bracketremoved in wavProcessor.js
+| | * 612256f72  elseif bracketremoved in wavProcessor.js
+| | * 4e4c51b73  CodeCheck : for loop brcket remove new one in audioSampleSender.js
+| | * 16311412d  for loop brcket remove new one in audioSampleSender.js
+| | * 55c5b93eb  CodeCheck -> for loop brcket remove new one in audioSampleSender.js
+| | * 89265d8d6  for loop brcket remove new one in audioSampleSender.js
+| | * 4477939d7  for loop brcket remove new one in audioSampleSender.js
+| | * ef1f8ef31  for loop brcket remove new one in audioSampleSender.js
+| | * a9cd157ac  for loop brcket remove new one in audioSampleSender.js
+| | * 4d319512b after adding the bracket in code check
+| | * a3bb753f8 for loop brcket remove
+| * | 3014ded4f  Test in lyte-popover.js
+| |/  
+| * 9143ae856 ReleaseNotes updated
+| * 69a706019 bugfix
+| * 73f27722e test
+| * d33a363e5 ReleaseNotes updated
+| * aa7687fbd ft
+| * 7b1a23f13 test
+| * 0545e73dc new ft
+| * 2f66605c9 test
+| * 5ba315db4 lyte popover changes
+| * a22eb7780 ReleaseNotes updated
+| * 1c217013d Ft
+| * 52c6932f5 Testing commit
+| * 4e2d50826 ReleaseNotes updated
+| * 1e3bb3719 Ft
+| * 64074767f Testing Feature
+| * f7bf4af11 ReleaseNotes updated
+| * 1946be58d Testing commit
+| * d168bf4f7 ReleaseNotes updated
+| * 61487885a FT
+| * 144b5bd46 Ft
+| * ff0dbcdb1 bugfix
+| * 15a8acc15 ReleaseNotes updated
+| * b3f285e8d Test
+| * 48c5c2ca8 ReleaseNotes updated
+| * 2c14f1a1a bugfix
+            `;
+
+            const lines = commitData.trim().split('\n').map(line => line.trim());
+            const data = lines.map((line, index) => ({
+                id: `Commit ${index + 1}`,
+                parent: index === 0 ? null : `Commit ${index}`
+            }));
+
+            const root = d3.stratify()
+                .id(d => d.id)
+                .parentId(d => d.parent)
+                (data);
+
+            const treeLayout = d3.tree().size([600, 400]);
+            treeLayout(root);
+
+            const svg = d3.select('.chart');
+            const g = svg.append('g')
+                .attr('transform', 'translate(50, 50)');
+
+            g.selectAll('.link')
+                .data(root.links())
+                .enter()
+                .append('line')
+                .attr('class', 'link')
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y)
+                .attr('stroke', '#ccc');
+
+            g.selectAll('.node')
+                .data(root.descendants())
+                .enter()
+                .append('circle')
+                .attr('class', 'node')
+                .attr('cx', d => d.x)
+                .attr('cy', d => d.y)
+                .attr('r', 5)
+                .attr('fill', '#000');
+
+            g.selectAll('.label')
+                .data(root.descendants())
+                .enter()
+                .append('text')
+                .attr('class', 'label')
+                .attr('x', d => d.x)
+                .attr('y', d => d.y - 10)
+                .attr('text-anchor', 'middle')
+                .text(d => d.id);
+        });
+    </script>
+</body>
+</html>
+           
+
+           

@@ -1,0 +1,15 @@
+{
+  "name": "graphrepo",
+  "version": "1.0.0",
+  "description": "test files",
+  "main": "graph.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "thamim"
+  ],
+  "author": "thamim",
+  "license": "ISC"
+}
