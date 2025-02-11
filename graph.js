@@ -22,7 +22,7 @@ return {
                 'component/comp74t/utils.js',
                 'component/comp7etrv/utils.js',
                 'component/compew7/utils.js',
-                'component/comp1/vfx.js'
+                'component/comp1/vfx.txt'
             ]
        }
     }),
