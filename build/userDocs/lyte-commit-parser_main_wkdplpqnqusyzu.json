@@ -10,6 +10,16 @@
         "date_of_commit": "10 - 2 - 2025",
         "time_of_commit": "20:11:12",
         "hash_of_commit": "1caf546"
+      },
+      {
+        "msg": "fixed the line",
+        "type_of_commit": "[FEATURE]",
+        "fileName": [
+          "graph.js"
+        ],
+        "date_of_commit": "11 - 2 - 2025",
+        "time_of_commit": "12:55:57",
+        "hash_of_commit": "e3c4284"
       }
     ],
     "test": [
