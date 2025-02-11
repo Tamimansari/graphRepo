@@ -30,6 +30,16 @@
         "date_of_commit": "11 - 2 - 2025",
         "time_of_commit": "12:58:09",
         "hash_of_commit": "f3ca1ba"
+      },
+      {
+        "msg": "test commit",
+        "type_of_commit": "[FEATURE]",
+        "fileName": [
+          "graph.js"
+        ],
+        "date_of_commit": "11 - 2 - 2025",
+        "time_of_commit": "13:04:25",
+        "hash_of_commit": "519e9ec"
       }
     ],
     "test": [
