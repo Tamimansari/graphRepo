@@ -1,15 +1,15 @@
 {
   "unpublishedVersion": {
-    "singleFile": [
+    "test": [
       {
-        "msg": "commit on second with out knowing the otherrepo is pushed",
+        "msg": "commit msg on first",
         "type_of_commit": "[FEATURE]",
         "fileName": [
           "index.html"
         ],
         "date_of_commit": "10 - 2 - 2025",
-        "time_of_commit": "20:11:12",
-        "hash_of_commit": "1caf546"
+        "time_of_commit": "20:10:10",
+        "hash_of_commit": "cf981df"
       }
     ]
   }
